@@ -1,0 +1,13 @@
+# Ambiente conda do Extrator de Curvas MK2.
+# Criar:   conda env create -f environment.yml
+# Ativar:  conda activate extrator-de-curvas
+# Instala o próprio projeto (pasta src/) em modo editável, com as dependências
+# declaradas em pyproject.toml e as ferramentas de teste.
+name: extrator-de-curvas
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - -e .[dev]
