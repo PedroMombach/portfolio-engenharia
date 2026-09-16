@@ -1,0 +1,35 @@
+# Python e ferramentas de desenvolvimento
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+build/
+dist/
+*.egg-info/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+~$*
+
+# Saídas geradas ao rodar os exemplos e testes
+lista-materiais-latex/output/
+lista-materiais-latex/tmp/
+seletor-bombas/.test-output*/
+extrator-de-curvas/release/
+extrator-de-curvas/test-output/
+extrator-de-curvas/dataset/
+extrator-de-curvas/tools/_build_deps/
+extrator-de-curvas/config/settings.json
+*.ecp
+
+# Doc2MD: configuração local e acervo convertido nunca vão para o repositório
+doc2md/config.toml
+doc2md/overrides*.toml
+!doc2md/overrides.example.toml
+doc2md/**/*.pdf
+doc2md/**/*.PDF
+doc2md/.test-tmp-*/
