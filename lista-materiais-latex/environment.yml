@@ -1,0 +1,11 @@
+# Ambiente conda da Lista de materiais em LaTeX.
+# Criar:   conda env create -f environment.yml
+# Ativar:  conda activate lista-materiais-latex
+# O pdflatex NÃO vem pelo conda: instale o MiKTeX (Windows) ou o TeX Live.
+name: lista-materiais-latex
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - openpyxl>=3.1,<4
+  - pypdf>=5,<7        # usado apenas pelos testes

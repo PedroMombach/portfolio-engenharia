@@ -1,0 +1,67 @@
+\section{OBJETIVO}
+Este arquivo tem por propósito ilustrar a estrutura padrão de saída de um documento técnico, exibindo a organização de seções, listas e itens de definição.
+
+\noindent Não se trata de um inventário exaustivo de componentes, tampouco reproduz dados constantes em normas técnicas ou orientações detalhadas sobre processos produtivos e desenhos dimensionais.
+
+
+\section{DOCUMENTOS DE REFERÊNCIA}
+\begin{itemize}
+\item \textbf{EMP-GER-ETG-001-0.1} – DOCUMENTO BASE A - ESPECIFICAÇÃO TÉCNICA GERAL DO EMPREENDIMENTO
+\item \textbf{EMP-MEC-PRO-001-0.3} - DOCUMENTO BASE B - PROCEDIMENTOS DE SOLDAGEM
+\item \textbf{EMP-GER-ETG-002-0.1} - DOCUMENTO BASE C - DIRETRIZES DE PROJETO DO CLIENTE
+\end{itemize}
+
+\section{ORIENTAÇÕES DE LEITURA}
+
+\begin{enumerate}[label=\alph*)]
+\item As fichas reúnem famílias de componentes segundo o material e o tipo cadastrado no banco de exemplo.
+
+\item Cada linha da tabela identifica uma dimensão e apresenta os códigos de ambas as partes, a quantidade emitida e sua unidade.
+
+\item Valores iguais a zero permanecem na planilha de entrada e são omitidos do documento. Quando uma família não tem figura cadastrada, a ficha usa a imagem padrão do template.
+\end{enumerate}
+
+
+\section{ESTRUTURA DE CODIFICAÇÃO}
+
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[
+    >=Stealth,
+    font=\small
+]
+
+% Texto principal
+\node[anchor=west] at (-5.35,0.1)
+    {\large\underline{MEC}-\underline{AI}-\underline{10000}-\underline{000}};
+
+% Linhas verticais
+\draw (-4.65,-0.1) -- (-4.65,-2.6);
+\draw (-3.75,-0.1) -- (-3.75,-1.9);
+\draw (-2.75,-0.1) -- (-2.75,-1.2);
+\draw (-1.55,-0.1) -- (-1.55,-0.5);
+
+% Linhas horizontais + setas
+\draw[->] (-1.55,-0.5) -- (0.5,-0.5);
+\draw[->] (-2.75,-1.2) -- (0.5,-1.2);
+\draw[->] (-3.75,-1.9) -- (0.5,-1.9);
+\draw[->] (-4.65,-2.6) -- (0.5,-2.6);
+
+% Textos
+\node[anchor=west] at (0.6,-0.5)
+    {Sequencial identificador único da dimensão característica};
+
+\node[anchor=west] at (0.6,-1.2)
+    {Sequencial identificador único da familia do elemento};
+
+\node[anchor=west] at (0.6,-1.9)
+    {Indicador de Material (Aço Inoxidável)};
+
+\node[anchor=west] at (0.6,-2.6)
+    {Indicador de área (Mecânica)};
+
+\end{tikzpicture}
+
+\end{figure}
+\newpage

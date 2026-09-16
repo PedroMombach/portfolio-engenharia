@@ -1,0 +1,13 @@
+# Variante com GPU NVIDIA. Instale DEPOIS do requirements.txt, no mesmo ambiente:
+#     pip install -r requirements-gpu.txt
+# (ou rode `.\instalar.ps1 -Gpu`, que faz os dois na ordem certa)
+#
+# Medido numa RTX 3050 6 GB: os modelos do Docling ficaram 16x mais rapidos que em CPU
+# (100 formulas com enriquecimento: 78 min -> 4,9 min), com pico de 2,9 GB de VRAM.
+# Sem GPU, nao instale nada disto: `dispositivo = "auto"` cai para CPU sozinho.
+#
+# O indice do PyTorch e proprio; o pip so acha as versoes +cu126 por ele.
+--extra-index-url https://download.pytorch.org/whl/cu126
+
+torch==2.14.0+cu126
+torchvision==0.29.0+cu126

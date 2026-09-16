@@ -1,0 +1,18 @@
+% Contador independente das seções introdutórias.
+\newcounter{materialsection}
+\newcounter{materialsheet}[materialsection]
+\renewcommand{\thematerialsection}{\arabic{materialsection}}
+\newcommand{\AddSec}[2]{%
+  \clearpage
+  \refstepcounter{materialsection}
+  \label{#2}
+  \addcontentsline{toc}{section}{SEÇÃO \thematerialsection\ -- #1}
+  \vspace*{\fill}
+  \begin{center}
+    {\Large\bfseries SEÇÃO \thematerialsection\par}
+    \vspace{1cm}
+    {\Huge\bfseries #1\par}
+  \end{center}
+  \vfill
+  \clearpage
+}

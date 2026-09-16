@@ -1,0 +1,17 @@
+%Configurar fonte
+\usepackage{lmodern} % Família sans-serif genérica da distribuição LaTeX.
+\renewcommand{\familydefault}{\sfdefault}
+
+%Espaçamento entre linhas
+\usepackage{setspace}
+\onehalfspacing
+
+%Configuração dos itens enumerados
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=\arabic*.}
+\setlist[enumerate,2]{label=\arabic{enumi}.\arabic*}
+\setlist[enumerate,3]{label=\arabic{enumi}.\arabic{enumii}.\arabic*}
+
+% Configuração dos itens não numerados
+\setlist[itemize,1]{label=$\bullet$}
+\setlist[itemize,2]{label=$\circ$}

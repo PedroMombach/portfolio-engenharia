@@ -1,0 +1,12 @@
+# Ambiente conda das Curvas de bombas.
+# Criar:   conda env create -f environment.yml
+# Ativar:  conda activate curvas-bombas
+name: curvas-bombas
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - pandas
+  - matplotlib
+  - shapely

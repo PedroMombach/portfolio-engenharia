@@ -1,0 +1,37 @@
+\begin{titlepage}
+  \centering
+  \scalebox{2.1}{\MarcaLM}\par
+  \vspace{4mm}
+  {\large\MarcaCentral\par}
+  \vspace{5mm}
+  \large\textbf{CLIENTE: \Cliente}\par
+  \vspace{15mm}
+  {\large CÓDIGO DO EMITENTE: \textbf{\CodigoEmitente}\par}
+  \vspace{2mm}
+  {\large CÓDIGO DO CLIENTE: \textbf{\CodigoCliente}\par}
+  \vspace{5mm}
+  \rule{\linewidth}{0.5mm}\par
+  \vspace{4mm}
+  {\Large\bfseries \Titulo\par}
+  \vspace{4mm}
+  \rule{\linewidth}{0.5mm}\par
+  \vspace{12mm}
+  \begin{flushleft}
+    \large
+    \textbf{Área/Disciplina:} \Disciplina\par
+    \textbf{Contratada:} \Contratada
+  \end{flushleft}
+  \vfill
+  \begin{flushleft}\small\textbf{Histórico de revisões:}\end{flushleft}
+  \begingroup
+  \scriptsize
+  \setstretch{1.1}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{8mm}|>{\centering\arraybackslash}p{18mm}|X|>{\centering\arraybackslash}p{20mm}|>{\centering\arraybackslash}p{20mm}|>{\centering\arraybackslash}p{20mm}|}
+    \hline
+    \textbf{Rev.} & \textbf{Data} & \textbf{Natureza da revisão} &
+    \textbf{Elaborador} & \textbf{Verificador} & \textbf{Aprovador} \\ \hline
+    \HistoricoRevisoes
+  \end{tabularx}
+  \endgroup
+\end{titlepage}

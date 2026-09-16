@@ -1,0 +1,16 @@
+# Copy beside your PDFs and name it overrides.toml, or point to it in config.toml.
+# The table name is the PDF filename without .pdf, normalized to ASCII with spaces -> hyphens.
+# IDs containing a dot must be quoted: ["SPEC-A.1-2026-example"].
+
+["SPEC-A.1-2026-example"]
+rota = 'A'  # A/B native text; C scan; D damaged text; E mixed
+idioma_ocr = 'eng'
+titulo = 'Example engineering specification'
+status = 'vigente' # vigente | cancelada | projeto | traducao
+motivo = 'Route confirmed by inspecting the source PDF'
+
+# To export dimensional tables to CSV, add:
+# extras = ['F']
+# ["SPEC-A.1-2026-example".tabelas]
+# paginas = '2-3'
+# flavor = 'stream'

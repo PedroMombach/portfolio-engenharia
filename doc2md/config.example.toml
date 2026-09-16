@@ -1,0 +1,21 @@
+# Copy to config.toml and adjust. Paths are resolved relative to this file.
+# Keep both folders outside the Doc2MD source directory; output cannot be inside input.
+
+[caminhos]
+entrada = '../meus-pdfs'
+saida = '../meus-pdfs-md'
+overrides = ''
+
+[execucao]
+perfil = 'padrao' # add custom rules only for documents you may transform
+jobs = 0         # 0 = CPU count - 1
+timeout = 300
+extensoes = ['.pdf']
+dispositivo = 'auto' # auto | cpu | cuda
+
+[limiares]
+disco_min_gb = 5
+acuracia_min = 90
+
+[ferramentas]
+# tesseract = 'C:\Program Files\Tesseract-OCR\tesseract.exe'

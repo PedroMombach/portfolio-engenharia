@@ -1,0 +1,32 @@
+{
+  "identificador": "exemplo",
+  "titulo": "LISTA DE MATERIAIS DE DEMONSTRAÇÃO",
+  "codigo_emitente": "EMP-MEC-LM-001",
+  "codigo_cliente": "CLI-LM-001",
+  "revisao": "0.1",
+  "cliente": "Cliente de Demonstração",
+  "contratada": "Engenharia Exemplo",
+  "disciplina": "Mecânica",
+  "pagina_inicial": 1,
+  "catalogo": "../../DB/data.xlsx",
+  "figuras": "../../DB/figs",
+  "itens": "itens.xlsx",
+  "historico_revisoes": [
+    {
+      "revisao": "0.0",
+      "data": "13/09/2026",
+      "descricao": "Emissão inicial",
+      "elaborador": "João S.",
+      "verificador": "Maria M.",
+      "aprovador": "Carlos E."
+    },
+    {
+      "revisao": "0.1",
+      "data": "14/09/2026",
+      "descricao": "Exemplo com quantidades por emissão",
+      "elaborador": "João S.",
+      "verificador": "Maria M.",
+      "aprovador": "Carlos E."
+    }
+  ]
+}

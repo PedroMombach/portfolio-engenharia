@@ -1,0 +1,47 @@
+\NewDocumentEnvironment{myTables}{m m m m m m +b}{%
+  \stepcounter{materialsheet}
+  % A família aparece na navegação lateral do PDF, sem entrar no sumário impresso.
+  \phantomsection
+  \pdfbookmark[2]{#2 -- #1}{#6}
+  \begingroup
+  \small
+  \setstretch{1.15}
+  \renewcommand{\arraystretch}{1.35}
+  \noindent
+  \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{17mm}|X|p{52mm}|}
+    \hline
+    \textbf{\thematerialsection.\arabic{materialsheet}} &
+    \textbf{TÍTULO:} #1 & \textbf{CÓDIGO:} #2 \\ \hline
+  \end{tabularx}
+  \par\vspace{\baselineskip}\noindent
+  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{52mm}|}
+    \hline
+    \multicolumn{2}{|c|}{\parbox[c][42mm][c]{0.94\textwidth}{\centering #5}} \\ \hline
+    \textbf{DESCRIÇÃO:}\par #3 &
+    \textbf{REF. COMERCIAL:}\par #4 \\ \hline
+  \end{tabularx}
+  \par\vspace{\baselineskip}
+  \setlength{\LTleft}{0pt}
+  \setlength{\LTright}{0pt}
+  \setlength{\LTpre}{0pt}
+  \setlength{\LTpost}{0pt}
+  \begin{longtable}{|p{\dimexpr0.26\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|
+    p{\dimexpr0.26\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|
+    >{\centering\arraybackslash}p{\dimexpr0.20\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|
+    >{\centering\arraybackslash}p{\dimexpr0.16\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|
+    >{\centering\arraybackslash}p{\dimexpr0.12\textwidth-2\tabcolsep-1.2\arrayrulewidth\relax}|}
+    \hline
+    \textbf{Código emitente} & \textbf{Código cliente} & \textbf{Dimensão} &
+    \textbf{Quantidade} & \textbf{Unidade} \\ \hline
+    \endfirsthead
+    \multicolumn{5}{c}{\textbf{#2 -- #1 (continuação)}} \\
+    \hline
+    \textbf{Código emitente} & \textbf{Código cliente} & \textbf{Dimensão} &
+    \textbf{Quantidade} & \textbf{Unidade} \\ \hline
+    \endhead
+    \endfoot
+    #7
+  \end{longtable}
+  \endgroup
+  \clearpage
+}{}

@@ -1,0 +1,21 @@
+# Ambiente do Doc2MD. Cria com:  conda env create -f environment.yml
+# (ou rode instalar.ps1, que ainda baixa os pacotes de idioma do Tesseract e chama o `doutor`.)
+#
+# Ambiente dedicado: Docling e PyTorch instalam dependencias pesadas.
+name: doc2md
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python=3.12
+
+  # Poppler 24.04 reproduz a calibracao do estudo de caso. Ao atualizar, revise as rotas
+  # sugeridas antes de aceitar o resultado. Veja docs/metodologia.md.
+  - poppler=24.04
+  - qpdf                  # etapa 0: qpdf --check
+  - tesseract=5.5.3       # etapa 2: motor de OCR (os idiomas vao a parte, ver instalar.ps1)
+  - pip
+  - pip:
+      - -r requirements.txt

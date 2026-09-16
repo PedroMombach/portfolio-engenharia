@@ -1,0 +1,9 @@
+% Marca demonstrativa construída com formas e texto do próprio LaTeX.
+\newcommand{\MarcaLM}{%
+  \tikz[baseline=(marca.base)]{%
+    \node[fill=blue!60!black, rounded corners=2pt, minimum width=12mm,
+      minimum height=10mm, inner sep=1mm, text=white, font=\sffamily\bfseries] (marca) {LM};%
+  }%
+}
+\newcommand{\MarcaCentral}{\textsf{\bfseries LM-LaTeX}}
+\newcommand{\MarcaDisciplina}{\textsf{\bfseries MEC}}

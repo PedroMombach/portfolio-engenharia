@@ -1,0 +1,10 @@
+# Doc2MD — Python 3.12 (ver environment.yml).
+# Externos (fora do pip): poppler, qpdf, Tesseract >= 5 com por/deu/eng — ver README.md.
+pyyaml
+pikepdf
+pypdfium2
+ocrmypdf>=17
+docling>=2.126,<3         # etapas/estrutura.py usa o serializador Markdown do docling-core 2.x
+pdfplumber
+camelot-py>=2.0
+jiwer

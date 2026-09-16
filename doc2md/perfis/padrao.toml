@@ -1,0 +1,16 @@
+# Perfil padrao de limpeza (etapa 5) e de bloqueio no QA (etapa 7).
+# As regras ficam aqui, nao no codigo. Regex em string literal ('...'): sem escapar barras.
+
+remover_linhas = []
+remover_trechos = []            # regex opcionais para perfis criados pelo operador
+recompor_hifenizacao = true                    # "supor-\ntar" -> "suportar"
+item_para_heading = '^(\d+(?:\.\d+)*)\s+(\S.*)$'
+colapsar_espaco_duplo = true                   # texto justificado gera "O  fator  parcial"
+
+[qa]
+# Qualquer ocorrencia no Markdown final reprova o documento para revisao humana.
+# CPF pode identificar uma pessoa natural. Esta checagem nao anonimiza o PDF,
+# JSON ou imagens, e CNPJ nao e por si so um dado pessoal.
+bloquear = [
+  '\b\d{3}\.\d{3}\.\d{3}-\d{2}\b',             # CPF
+]

@@ -1,0 +1,70 @@
+\usepackage{tikz}
+\pagestyle{fancy}
+
+% Uma única tabela reserva o espaço de cada logo e centraliza o título na altura.
+\fancyhf{}
+\fancyhead[C]{%
+  \begingroup
+  \setlength{\tabcolsep}{3mm}
+  \renewcommand{\arraystretch}{1}
+  \begin{tabular}{@{}>{\centering\arraybackslash}m{14mm}|
+    >{\raggedright\arraybackslash}m{\dimexpr\headwidth-71mm-6\tabcolsep-3\arrayrulewidth\relax}|
+    >{\centering\arraybackslash}m{43mm}|
+    >{\centering\arraybackslash}m{14mm}@{}}
+    \MarcaLM &
+    {\fontsize{8}{10}\selectfont\hyphenpenalty=10000\exhyphenpenalty=10000 \Titulo} &
+    \MarcaCentral &
+    \MarcaDisciplina
+  \end{tabular}%
+  \endgroup
+}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%Configuração do rodapé
+\fancyfoot{}
+\fancyfoot[L]{%
+    \parbox[b]{.45 \textwidth}{%
+        \fontsize{6}{12}\selectfont CÓDIGO DO EMITENTE \\ % Adjust the font size and content for the first line
+        \fontsize{8}{12}\selectfont \CodigoEmitente % Adjust the font size and content for the second line
+    }%
+    \hspace{.5in}
+    \parbox[b]{.35 \textwidth}{%
+        \fontsize{6}{12}\selectfont CÓDIGO DO CLIENTE\\ % Adjust the font size and content for the first line
+        \fontsize{8}{12}\selectfont \CodigoCliente % Adjust the font size and content for the second line
+    }%
+}
+
+
+
+\fancyfoot[R]{%
+    \parbox[b]{.1 \textwidth}{ \centering %
+        \fontsize{6}{12}\selectfont PÁGINA \\ % Adjust the font size and content for the first line
+        \fontsize{8}{12}\selectfont \thepage % Adjust the font size and content for the second line
+    }%
+    \parbox[b]{.1 \textwidth}{ \centering %
+        \fontsize{6}{12}\selectfont REVISÃO \\ % Adjust the font size and content for the first line
+        \fontsize{8}{12}\selectfont \Rev % Adjust the font size and content for the second line
+    }%
+}
+
+\renewcommand{\footrulewidth}{0.4pt}
+
+\setlength{\footskip}{45pt}
+
+
+
+% Margens de pagina
+\geometry{
+    a4paper,
+    left=0.98in,
+    right=0.59in,
+    top=0.39in, % Set the top margin for the entire page
+    headheight=45pt, % Adjust the header height as needed
+    includehead, % Include the header in the top margin calculation
+    headsep=30pt, % Adjust the separation between header and text
+    bottom=0.39in,
+    includefoot, % Include the footer in the bottom margin calculation
+    footskip=45pt, % Adjust the footer skip
+}
+% Recalcula a largura após geometry, incluindo cabeçalho e rodapé.
+\fancyhfoffset{0pt}
