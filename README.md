@@ -2,8 +2,9 @@
 
 **Português** | [English](README.en.md)
 
-Ferramentas que desenvolvi no meu trabalho de engenharia mecânica em projetos de
-infraestrutura hídrica: drenagem urbana, saneamento e geração hidrelétrica.
+Ferramentas que desenvolvi para a rotina de engenharia mecânica em projetos de infraestrutura hídrica: 
+macrodrenagem urbana, saneamento e geração hidrelétrica. As versões publicadas aqui foram desenvolvidas 
+de forma independente e rodam sobre dados sintéticos.
 Cada uma nasceu de uma tarefa recorrente de escritório, não de um exercício de
 programação. O objetivo é sempre o mesmo: tirar da rotina o trabalho repetitivo
 e deixar a atenção para a decisão de engenharia.
