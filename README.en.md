@@ -2,8 +2,9 @@
 
 [Português](README.md) | **English**
 
-Tools I built for my own mechanical engineering work on water infrastructure
-projects: urban drainage, sanitation and hydropower. Each one started as a
+Tools I built for mechanical engineering work on water infrastructure projects: 
+urban stormwater drainage, water and wastewater, and hydropower. The versions published 
+here were developed independently and run on synthetic data.. Each one started as a
 recurring office task, not as a programming exercise. The goal is always the
 same: take the repetitive work out of the routine and keep attention on the
 engineering decision.
